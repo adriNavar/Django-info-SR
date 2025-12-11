@@ -28,7 +28,7 @@
                 {# Card de los filtros y búsqueda #}
                 <div class="card shadow p-4" style="background-color: #f0e6d6;">
                     <h5 class="mb-3 text-center">Filtros y Búsqueda</h5>
-                    <form method="GET" action="{% url 'recetas:listar' %}">
+                    {% comment %} <form method="GET" action="{% url 'recetas:listar' %}">
                         {# NUEVO FILTRO: Estado #}
                         <div class="mb-3">
                             <label for="id_estado" class="form-label">Estado:</label>
@@ -37,7 +37,7 @@
                                 <option value="activas" {% if estado_actual == 'activas' %}selected{% endif %}>Activas</option>
                                 <option value="baja" {% if estado_actual == 'baja' %}selected{% endif %}>Dadas de Baja</option>
                             </select>
-                        </div>
+                        </div> {% endcomment %}
                         
                         {# Filtro: Categoría #}
                         <div class="mb-3">
